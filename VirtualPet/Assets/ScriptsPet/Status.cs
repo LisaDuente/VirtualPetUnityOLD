@@ -7,12 +7,12 @@ public class Status : MonoBehaviour
 
     private int counterHungry;
     private int counterClean;
-
     private int counterHappy;
 
     public HungerBarScript hungerBar;
     public CleanBarScript cleanBar;
     public HappyBarScript happyBar;
+    public CoinScript coins;
 
     private int accumulatorHungry = 1000;
     private int accumulatorClean = 3000;
@@ -20,6 +20,8 @@ public class Status : MonoBehaviour
     private int hungry = 10;
     private int clean = 3;
     private int happy = 10;
+
+    private int money= 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +58,11 @@ public class Status : MonoBehaviour
         if( hungry <10){
             hungry++;
             hungerBar.setHunger(hungry);
+
+            money++;
+            coins.changeText(money.ToString());
         }
+        
     }
 
     public void cleanUp(){
