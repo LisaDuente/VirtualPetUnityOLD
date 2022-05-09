@@ -13,6 +13,7 @@ private SpriteRenderer render;
 
 
 
+
     void Start (){
         render= background.GetComponent<SpriteRenderer>();
     }

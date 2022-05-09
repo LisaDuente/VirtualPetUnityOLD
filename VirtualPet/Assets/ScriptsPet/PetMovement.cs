@@ -8,6 +8,7 @@ public class PetMovement : MonoBehaviour
     public float moveSpeed = 0.01f;
     public float accuracy = 0.1f;
 
+    public StatusScript statusScript;
     public SpriteRenderer spriteRenderer;
     public Rigidbody2D rb;
 
@@ -20,7 +21,7 @@ public class PetMovement : MonoBehaviour
     // Update is called once per frame
 
     void Start(){
-        
+    
     }
    
     void Update()
@@ -42,7 +43,10 @@ public class PetMovement : MonoBehaviour
 
 //updates 50 times a second
     void FixedUpdate(){
-           move();
+        if(statusScript.petState == StatusScript.PetState.AWAKE){
+            move();
+        }
+           
        
     }
 
