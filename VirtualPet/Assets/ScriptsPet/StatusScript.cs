@@ -20,6 +20,8 @@ public class StatusScript : MonoBehaviour
     public CoinScript coins;
     public SpriteRenderer render;
 
+    public Animator animator;
+
     private int accumulatorHungry = 1000;
     private int accumulatorClean = 3000;
     private int accumulatorHappy = 2000;
@@ -27,7 +29,7 @@ public class StatusScript : MonoBehaviour
     private int clean = 3;
     private int happy = 10;
     public PetState petState;
-    private int money= 0;
+    public int money= 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +80,15 @@ public class StatusScript : MonoBehaviour
             render.color = new Color(1,1,1,1);
         }
         
+    }
+
+//maybe use later to touch pet and raise happiness
+    public void touchedByU(){
+        Debug.Log(animator.GetBool("isTouched"));
+        if(!animator.GetBool("isTouched")){
+            animator.SetBool("isTouched",true);
+        }
+        play();
     }
 
     public void updateStats(){
