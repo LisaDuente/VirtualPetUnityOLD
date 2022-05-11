@@ -68,6 +68,7 @@ public class StatusScript : MonoBehaviour
         if(happy < 10 && petState == PetState.AWAKE){
             happy++;
             happyBar.setHappy(happy);
+            animator.SetInteger("Happy",1);
         }
     }
 
@@ -83,13 +84,14 @@ public class StatusScript : MonoBehaviour
     }
 
 //maybe use later to touch pet and raise happiness
-    public void touchedByU(){
+/*    public void touchedByU(){
         Debug.Log(animator.GetBool("isTouched"));
         if(!animator.GetBool("isTouched")){
             animator.SetBool("isTouched",true);
         }
         play();
     }
+    */
 
     public void updateStats(){
         counterHungry++;

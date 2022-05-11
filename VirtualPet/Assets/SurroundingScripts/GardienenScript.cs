@@ -17,7 +17,10 @@ public Image plush;
 public Image bed;
 
 public Image gardienen;
+
+public GameObject Tapete;
 private SpriteRenderer renderBackground;
+private SpriteRenderer renderTapete;
 
 
 
@@ -26,6 +29,7 @@ private SpriteRenderer renderBackground;
 
     void Start (){
         renderBackground= background.GetComponent<SpriteRenderer>();
+        renderTapete = Tapete.GetComponent<SpriteRenderer>();
         
     }
 
@@ -33,6 +37,7 @@ private SpriteRenderer renderBackground;
       if(image.sprite != open){
         image.sprite = open;
         renderBackground.color = new Color(1,1,1,1);
+        renderTapete.color = new Color(1,1,1,1);
         bed.color = new Color(1,1,1,1);
         dresser.color = new Color(1,1,1,1);
         gardienen.color = new Color(1,1,1,1);
@@ -40,7 +45,8 @@ private SpriteRenderer renderBackground;
     
       }else{
         image.sprite = closed;
-        renderBackground.color = new Color(1,1,1,0.2f);
+        renderBackground.color = new Color(0.5f,0.4646226f,0.4646226f,1);
+        renderTapete.color = new Color(1,1,1,0.2f);
         bed.color = new Color(0.5f,0.4646226f,0.4646226f,1);
         dresser.color = new Color(0.5f,0.4646226f,0.4646226f,1);
         gardienen.color = new Color(0.5f,0.4646226f,0.4646226f,1);    

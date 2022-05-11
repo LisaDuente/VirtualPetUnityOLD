@@ -981,12 +981,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 6086570849243984627, guid: 0da0b0c401df93e46bbed46aea2187b1, type: 3}
+  m_Sprite: {fileID: -7483711134653270205, guid: 6d97a4aa52e7e714a971a859a0873623, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.19, y: 0.17}
+  m_Size: {x: 12, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1078,9 +1078,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6, y: -0.08}
-  m_Size: {x: 6, y: 4}
-  m_Direction: 1
+  m_Offset: {x: -1.9665713, y: -1}
+  m_Size: {x: 3.266858, y: 6}
+  m_Direction: 0
 --- !u!114 &603807138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,6 +1294,7 @@ MonoBehaviour:
   plush: {fileID: 1942227309}
   bed: {fileID: 67824540}
   gardienen: {fileID: 675348439}
+  Tapete: {fileID: 1077765889}
 --- !u!114 &675348438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2593,15 +2594,15 @@ RectTransform:
   m_GameObject: {fileID: 1540380757}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4633628, y: 1.4633628, z: 1.4633628}
+  m_LocalScale: {x: 0.36812356, y: 0.36812356, z: 0.36812356}
   m_Children: []
   m_Father: {fileID: 1741488260}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 365.9267, y: 822}
-  m_SizeDelta: {x: 160, y: 96}
+  m_AnchoredPosition: {x: 365.93, y: 822}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1540380759
 MonoBehaviour:
@@ -2647,7 +2648,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1540380762}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DecorButton, Assembly-CSharp
         m_MethodName: changeWall
         m_Mode: 1
@@ -2679,7 +2680,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d8f3b9e9d070064ca1cb8f51882df2a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a0b0ec9ee1c313449af7fd0fb5fc1a05, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2712,8 +2713,8 @@ MonoBehaviour:
   Tapete: {fileID: 1077765891}
   statusScript: {fileID: 603807138}
   coins: {fileID: 1775729312}
-  tapete1: {fileID: 21300000, guid: 1ee8db384cbeabb4aaa703e91aaf25dd, type: 3}
-  tapete2: {fileID: 21300000, guid: 5c065b3f3c667e54a8c4aa4615161d62, type: 3}
+  tapete1: {fileID: 21300000, guid: 5c065b3f3c667e54a8c4aa4615161d62, type: 3}
+  tapete2: {fileID: 21300000, guid: 1ee8db384cbeabb4aaa703e91aaf25dd, type: 3}
 --- !u!1 &1560750414
 GameObject:
   m_ObjectHideFlags: 0
@@ -4054,7 +4055,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 88d66ed0bf68b644eb05612f593a2059, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4098,13 +4099,13 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: -3.5}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -33.44546, y: -16.617977}
-  - {x: -44.85237, y: -24.71835}
-  - {x: -44.83936, y: -32.89291}
-  - {x: 45.056053, y: -33.00193}
-  - {x: 45.32158, y: -26.36065}
-  - {x: 33.201675, y: -16.583965}
-  - {x: 34.333992, y: -16.417967}
+  - {x: -32.525986, y: -15.698929}
+  - {x: -44.075058, y: -24.71835}
+  - {x: -44.062042, y: -35.66774}
+  - {x: 44.147385, y: -35.55477}
+  - {x: 44.211132, y: -26.36065}
+  - {x: 32.938965, y: -15.533623}
+  - {x: 35.384827, y: -15.1050415}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -4125,8 +4126,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: -2}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -45.053635, y: -19.879375}
-  - {x: 46.86971, y: -19.878521}
+  - {x: -44.922283, y: -17.647402}
+  - {x: 46.607, y: -17.646547}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
