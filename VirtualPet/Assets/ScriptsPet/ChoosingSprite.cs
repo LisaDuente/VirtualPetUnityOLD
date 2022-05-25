@@ -22,12 +22,12 @@ public class ChoosingSprite : MonoBehaviour
         
     }
 
-    int randomize(){
-        var number = Random.Range(0,8);
+    public int randomize(){
+        var number = Random.Range(0,10);
         return number;
     }
 
-    void chooseSprite(){
+    public void chooseSprite(){
         spriteRenderer[1].sprite = bodies[randomize()];
         spriteRenderer[2].sprite = faces[randomize()];
         spriteRenderer[3].sprite = heads[randomize()];

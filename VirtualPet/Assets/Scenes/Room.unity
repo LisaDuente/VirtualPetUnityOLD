@@ -1208,6 +1208,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e746ad653dee0094c9105784c384c50b, type: 3}
   - {fileID: 21300000, guid: 3162800265a65e842a3e7ea0d49f4f7e, type: 3}
   - {fileID: 21300000, guid: 668c181d9e4a3324597bf286d3d62a5a, type: 3}
+  - {fileID: 21300000, guid: f47f15f8a59afd746b646f4fbdbdf6c6, type: 3}
+  - {fileID: 21300000, guid: 091912779f3bc844dbf27198bca1993e, type: 3}
   faces:
   - {fileID: 21300000, guid: 2793f618b0d771948a54ebc65dc0bcf5, type: 3}
   - {fileID: 21300000, guid: 1cc6d8eaae035de49b4bc0a5f8ea5be3, type: 3}
@@ -1217,6 +1219,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 63910461cd1e9d144934c0589cdd24bf, type: 3}
   - {fileID: 21300000, guid: f6071535bd57d0e43a7f990020d67216, type: 3}
   - {fileID: 21300000, guid: bac45923f8be95b45bc9509acd93cfa4, type: 3}
+  - {fileID: 21300000, guid: 6874f819aba39ec4da3850ef426dc468, type: 3}
+  - {fileID: 21300000, guid: 588a8c6b4083cf443bbcb70bdc2cff2c, type: 3}
   heads:
   - {fileID: 21300000, guid: dda166b6ebbed2d4694d3ee2756f4df7, type: 3}
   - {fileID: 21300000, guid: 84b34580423e2f748b83e0b2cb9d3577, type: 3}
@@ -1226,6 +1230,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d240d69462da293479aa7bc41264954f, type: 3}
   - {fileID: 21300000, guid: 866f625b15cb20e4db50e46085c2990f, type: 3}
   - {fileID: 21300000, guid: 2ce0098cc8a87864b9c3b3e1d7d0b848, type: 3}
+  - {fileID: 21300000, guid: da104e098e1186043943225cc3eb4637, type: 3}
+  - {fileID: 21300000, guid: cec305e890e29dc45bc118196bab045e, type: 3}
 --- !u!1 &604044949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1245,7 @@ GameObject:
   - component: {fileID: 604044952}
   - component: {fileID: 604044951}
   m_Layer: 5
-  m_Name: Heal
+  m_Name: Change
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1309,9 +1315,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 603807138}
-        m_TargetAssemblyTypeName: Status, Assembly-CSharp
-        m_MethodName: feed
+      - m_Target: {fileID: 603807139}
+        m_TargetAssemblyTypeName: ChoosingSprite, Assembly-CSharp
+        m_MethodName: chooseSprite
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2209,7 +2215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Heal
+  m_text: Change
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
