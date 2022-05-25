@@ -19,6 +19,7 @@ public class StatusScript : MonoBehaviour
     public HappyBarScript happyBar;
     public CoinScript coins;
     public SpriteRenderer render;
+    private SpriteRenderer[] allRender;
 
     public Animator animator;
 
@@ -34,6 +35,7 @@ public class StatusScript : MonoBehaviour
     void Start()
     {
         petState = PetState.AWAKE;
+        allRender = GetComponentsInChildren<SpriteRenderer>();
 
     }
 
@@ -75,10 +77,17 @@ public class StatusScript : MonoBehaviour
     public void sleep(){
         if(petState == PetState.AWAKE){
             petState = PetState.SLEEPING;
-            render.color = new Color(1,1,1,0);
+            foreach (SpriteRenderer render in allRender)
+            {
+                render.color = new Color(1,1,1,0);
+            }
+            
         }else{
             petState = PetState.AWAKE;
-            render.color = new Color(1,1,1,1);
+            foreach (SpriteRenderer render in allRender)
+            {
+                render.color = new Color(1,1,1,1);
+            }
         }
         
     }
