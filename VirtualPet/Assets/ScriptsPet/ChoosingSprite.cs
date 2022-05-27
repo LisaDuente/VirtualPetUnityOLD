@@ -33,7 +33,7 @@ public class ChoosingSprite : MonoBehaviour
     }
 
     public int randomize(){
-        var number = Random.Range(0,10);
+        var number = Random.Range(0,2);
         return number;
     }
 
@@ -42,7 +42,9 @@ public class ChoosingSprite : MonoBehaviour
         var randomFace = randomize();
         var randomHead = randomize();
         //spriteRenderer[1].sprite = bodies[2];
-        this.overriderBody.setAnimation(this.overrideControllersBody[0]);
+        this.overriderBody.setAnimation(this.overrideControllersBody[randomBody]);
+        this.overriderHead.setAnimation(this.overrideControllersHead[randomHead]);
+        this.overriderFace.setAnimation(this.overrideControllersFace[randomFace]);
         //spriteRenderer[1].sprite = bodies[randomize()];
         //spriteRenderer[2].sprite = faces[randomize()];
         //spriteRenderer[3].sprite = heads[randomize()];

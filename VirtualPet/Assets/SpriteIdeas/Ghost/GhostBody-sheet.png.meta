@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: -6919436613288960976
     second: GhostBody-sheet_1
+  - first:
+      213: 4822078028321694625
+    second: GhostBody-sheet_2
+  - first:
+      213: 6924422243061316484
+    second: GhostBody-sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -146,6 +152,48 @@ TextureImporter:
       bones: []
       spriteID: 03c541b9f0939ff90800000000000000
       internalID: -6919436613288960976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostBody-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3a4551b667be240800000000000000
+      internalID: 4822078028321694625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostBody-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48bbb78c75d781060800000000000000
+      internalID: 6924422243061316484
       vertices: []
       indices: 
       edges: []

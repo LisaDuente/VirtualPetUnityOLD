@@ -603,7 +603,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 12
-  m_Sprite: {fileID: 5289162685344102077, guid: f92031d28efe3854d9821a06de44b42c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -611,7 +611,7 @@ SpriteRenderer:
   m_Size: {x: 14, y: 14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &462135705
@@ -1233,11 +1233,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overrideControllersBody:
   - {fileID: 22100000, guid: a265ea2aa2f52334d95d7a7f02b3393e, type: 2}
+  - {fileID: 22100000, guid: d3fd31711cce1b545bcfd2e67197e6ec, type: 2}
   overriderBody: {fileID: 856300597}
-  overrideControllersFace: []
-  overriderFace: {fileID: 0}
-  overrideControllersHead: []
-  overriderHead: {fileID: 0}
+  overrideControllersFace:
+  - {fileID: 22100000, guid: 48df1375972dbce468a3afee0156a80d, type: 2}
+  - {fileID: 22100000, guid: 77e2adbad37354b4db543e9769361b01, type: 2}
+  overriderFace: {fileID: 462135706}
+  overrideControllersHead:
+  - {fileID: 22100000, guid: 882dd6604b491dd4eaab46d1bfde1c8a, type: 2}
+  - {fileID: 22100000, guid: 03f01274e85ec0949a06b9581b3a4c00, type: 2}
+  overriderHead: {fileID: 1265269155}
 --- !u!1 &604044949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,7 +2745,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: 3494802418900441212, guid: b2b8c9ebbc304da4f8bdaf40cada3756, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2748,7 +2753,7 @@ SpriteRenderer:
   m_Size: {x: 14, y: 14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1265269154
@@ -4466,13 +4471,13 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: -3.5}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -32.525986, y: -15.698929}
-  - {x: -44.075058, y: -24.71835}
+  - {x: -32.118507, y: -9.31811}
+  - {x: -44.075058, y: -19.830914}
   - {x: -44.062042, y: -35.66774}
-  - {x: 44.147385, y: -35.55477}
-  - {x: 44.211132, y: -26.36065}
-  - {x: 32.938965, y: -15.533623}
-  - {x: 35.384827, y: -15.1050415}
+  - {x: 43.739906, y: -35.55477}
+  - {x: 43.803654, y: -21.065928}
+  - {x: 34.02557, y: -10.374663}
+  - {x: 36.87891, y: -9.26727}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -4493,8 +4498,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: -2}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -44.922283, y: -17.647402}
-  - {x: 46.607, y: -17.646547}
+  - {x: -44.65063, y: -12.759966}
+  - {x: 47.014477, y: -12.487588}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0

@@ -92,8 +92,12 @@ public class PetMovement : MonoBehaviour
                     //add to transform to change the current position on screen (by a little bit in direction of goal position)
                     transform.position = transform.position + new Vector3(moveX,moveY,0);
                     this.animatorBody.SetInteger("Walking", 1);
+                    this.animatorHead.SetInteger("Walking",1);
+                    this.animatorFace.SetInteger("Walking",1);
                 }else{
                     this.animatorBody.SetInteger("Walking", 0);
+                    this.animatorHead.SetInteger("Walking", 0);
+                    this.animatorFace.SetInteger("Walking",0);
                 }
     }
         
