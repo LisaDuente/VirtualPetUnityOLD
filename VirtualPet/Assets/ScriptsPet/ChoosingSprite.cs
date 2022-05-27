@@ -2,18 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace MonoBehaviours{
 public class ChoosingSprite : MonoBehaviour
 {
     private SpriteRenderer[] spriteRenderer;
 
-    public Sprite[] bodies = new Sprite[8];
-    public Sprite[] faces = new Sprite[8];
-    public Sprite[] heads = new Sprite[8];
-    // Start is called before the first frame update
+    [SerializeField] private AnimatorOverrideController[] overrideControllersBody;
+    [SerializeField] private AnimatorOverrider overriderBody;
+
+    [SerializeField] private AnimatorOverrideController[] overrideControllersFace;
+    [SerializeField] private AnimatorOverrider overriderFace;
+
+    [SerializeField] private AnimatorOverrideController[] overrideControllersHead;
+    [SerializeField] private AnimatorOverrider overriderHead;
+
+ 
+    private void Awake() {
+        this.spriteRenderer = this.GetComponentsInChildren<SpriteRenderer>();
+    }
+       // Start is called before the first frame update
     void Start()
     {
-        this.spriteRenderer = this.GetComponentsInChildren<SpriteRenderer>();
-        chooseSprite();
+        //chooseSprite();
     }
 
     // Update is called once per frame
@@ -28,8 +38,15 @@ public class ChoosingSprite : MonoBehaviour
     }
 
     public void chooseSprite(){
-        spriteRenderer[1].sprite = bodies[randomize()];
-        spriteRenderer[2].sprite = faces[randomize()];
-        spriteRenderer[3].sprite = heads[randomize()];
+        var randomBody = randomize();
+        var randomFace = randomize();
+        var randomHead = randomize();
+        //spriteRenderer[1].sprite = bodies[2];
+        this.overriderBody.setAnimation(this.overrideControllersBody[0]);
+        //spriteRenderer[1].sprite = bodies[randomize()];
+        //spriteRenderer[2].sprite = faces[randomize()];
+        //spriteRenderer[3].sprite = heads[randomize()];
     }
+}
+
 }

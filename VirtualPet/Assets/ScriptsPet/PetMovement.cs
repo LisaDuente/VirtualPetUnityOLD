@@ -12,16 +12,25 @@ public class PetMovement : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Rigidbody2D rb;
 
-    public Animator animator; 
+    private Animator animatorBody;
+    private Animator animatorFace;
+    private Animator animatorHead; 
     
     private float moveX;
     private float moveY;
+    private bool facingRight;
 
     public Vector3 touchPosition = new Vector3(0,0,0);
     // Update is called once per frame
 
+    private void Awake() {
+        this.animatorBody = GetComponentsInChildren<Animator>()[1];
+        this.animatorFace = GetComponentsInChildren<Animator>()[2];
+        this.animatorHead = GetComponentsInChildren<Animator>()[3];
+    }
+
     void Start(){
-    
+       
     }
    
     void Update()
@@ -72,17 +81,29 @@ public class PetMovement : MonoBehaviour
                 if(lengthMove > accuracy){
 
                      //flips the sprite depending on where you have clicked
-                    if(moveX<0){
-                            spriteRenderer.flipX=false;
-                        }else{
-                            spriteRenderer.flipX=true;
+                    if(moveX>0 && !facingRight){
+                            Flip();
+                            facingRight= true;
+                        }else if(moveX<0 && facingRight){
+                            Flip();
+                            facingRight= false;
                         }
                     
                     //add to transform to change the current position on screen (by a little bit in direction of goal position)
                     transform.position = transform.position + new Vector3(moveX,moveY,0);
-                    animator.SetInteger("Walking", 1);
+                    this.animatorBody.SetInteger("Walking", 1);
                 }else{
-                    animator.SetInteger("Walking", 0);
+                    this.animatorBody.SetInteger("Walking", 0);
                 }
+    }
+        
+    void Flip(){
+        // Switch the way the player is labelled as facing
+        facingRight = !facingRight;
+
+        // Multiply the player's x local scale by -1
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 }
