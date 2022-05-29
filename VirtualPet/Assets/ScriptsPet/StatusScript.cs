@@ -26,15 +26,16 @@ public class StatusScript : MonoBehaviour
     private int accumulatorHungry = 1000;
     private int accumulatorClean = 3000;
     private int accumulatorHappy = 2000;
-    private int hungry = 10;
-    private int clean = 3;
-    private int happy = 10;
+    public int hungry;
+    public int clean;
+    public int happy;
     public PetState petState;
-    public int money= 0;
+    public int money;
+
     // Start is called before the first frame update
     void Start()
     {
-        petState = PetState.AWAKE;
+        //petState = PetState.AWAKE;
         allRender = GetComponentsInChildren<SpriteRenderer>();
 
     }
@@ -70,7 +71,6 @@ public class StatusScript : MonoBehaviour
         if(happy < 10 && petState == PetState.AWAKE){
             happy++;
             happyBar.setHappy(happy);
-            animator.SetInteger("Happy",1);
         }
     }
 

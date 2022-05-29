@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MonoBehaviours
-{
+//took away namespace monobehavoiurs
+
     public class AnimatorOverrider : MonoBehaviour
 {
    private Animator _animator;
@@ -17,4 +17,4 @@ namespace MonoBehaviours
     }
 }
 
-}
+

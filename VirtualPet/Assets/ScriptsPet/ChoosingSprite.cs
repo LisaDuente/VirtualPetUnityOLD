@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MonoBehaviours{
+//took away namespace Monobehaviours
 public class ChoosingSprite : MonoBehaviour
 {
     private SpriteRenderer[] spriteRenderer;
@@ -15,6 +15,10 @@ public class ChoosingSprite : MonoBehaviour
 
     [SerializeField] private AnimatorOverrideController[] overrideControllersHead;
     [SerializeField] private AnimatorOverrider overriderHead;
+
+    public int bodyArrayPosition;
+    public int headArrayPosition;
+    public int faceArrayPosition;
 
  
     private void Awake() {
@@ -33,22 +37,35 @@ public class ChoosingSprite : MonoBehaviour
     }
 
     public int randomize(){
-        var number = Random.Range(0,2);
+        var number = Random.Range(0,3);
         return number;
     }
 
     public void chooseSprite(){
-        var randomBody = randomize();
-        var randomFace = randomize();
-        var randomHead = randomize();
+        bodyArrayPosition = randomize();
+        headArrayPosition = randomize();
+          faceArrayPosition = randomize();
         //spriteRenderer[1].sprite = bodies[2];
-        this.overriderBody.setAnimation(this.overrideControllersBody[randomBody]);
-        this.overriderHead.setAnimation(this.overrideControllersHead[randomHead]);
-        this.overriderFace.setAnimation(this.overrideControllersFace[randomFace]);
+        this.overriderBody.setAnimation(this.overrideControllersBody[bodyArrayPosition]);
+        this.overriderHead.setAnimation(this.overrideControllersHead[headArrayPosition]);
+        this.overriderFace.setAnimation(this.overrideControllersFace[faceArrayPosition]);
         //spriteRenderer[1].sprite = bodies[randomize()];
         //spriteRenderer[2].sprite = faces[randomize()];
         //spriteRenderer[3].sprite = heads[randomize()];
     }
-}
+
+    public void setBodyController(){
+        this.overriderBody.setAnimation(this.overrideControllersBody[bodyArrayPosition]);
+    }
+
+    public void setHeadController(){
+        this.overriderHead.setAnimation(this.overrideControllersHead[headArrayPosition]);
+    }
+
+    public void setFaceController(){
+       this.overriderFace.setAnimation(this.overrideControllersFace[faceArrayPosition]);
+    }
+
 
 }
+

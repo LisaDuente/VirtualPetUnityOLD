@@ -1050,6 +1050,8 @@ GameObject:
   - component: {fileID: 603807137}
   - component: {fileID: 603807138}
   - component: {fileID: 603807136}
+  - component: {fileID: 603807140}
+  - component: {fileID: 603807141}
   m_Layer: 1
   m_Name: Pet
   m_TagString: Untagged
@@ -1217,6 +1219,9 @@ MonoBehaviour:
   coins: {fileID: 1775729312}
   render: {fileID: 603807132}
   animator: {fileID: 603807136}
+  hungry: 10
+  clean: 3
+  happy: 10
   petState: 0
   money: 0
 --- !u!114 &603807139
@@ -1234,15 +1239,48 @@ MonoBehaviour:
   overrideControllersBody:
   - {fileID: 22100000, guid: a265ea2aa2f52334d95d7a7f02b3393e, type: 2}
   - {fileID: 22100000, guid: d3fd31711cce1b545bcfd2e67197e6ec, type: 2}
+  - {fileID: 22100000, guid: 1a1d21bcf977c6e48984d3b483580617, type: 2}
   overriderBody: {fileID: 856300597}
   overrideControllersFace:
   - {fileID: 22100000, guid: 48df1375972dbce468a3afee0156a80d, type: 2}
   - {fileID: 22100000, guid: 77e2adbad37354b4db543e9769361b01, type: 2}
+  - {fileID: 22100000, guid: ac4fab894bef0fd42bb137132e67db3f, type: 2}
   overriderFace: {fileID: 462135706}
   overrideControllersHead:
   - {fileID: 22100000, guid: 882dd6604b491dd4eaab46d1bfde1c8a, type: 2}
   - {fileID: 22100000, guid: 03f01274e85ec0949a06b9581b3a4c00, type: 2}
+  - {fileID: 22100000, guid: 38b222d4084337b4eabf919abd4f6ea5, type: 2}
   overriderHead: {fileID: 1265269155}
+  bodyArrayPosition: 0
+  headArrayPosition: 0
+  faceArrayPosition: 0
+--- !u!114 &603807140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603807131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 241b37f13d65c9d429e1729fb0f65374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &603807141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603807131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1fe885dcbaffb44b92be7127e2d716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: {fileID: 603807138}
+  move: {fileID: 603807134}
+  sprite: {fileID: 603807139}
 --- !u!1 &604044949
 GameObject:
   m_ObjectHideFlags: 0
