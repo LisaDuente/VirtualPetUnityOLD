@@ -12,11 +12,11 @@ public class DecorButton : MonoBehaviour
 
     public Sprite tapete1;
     public Sprite tapete2;
+    public int currentWallpaper = 0; 
 
     private int wallpaperCount = 2;
     private ArrayList wallPapers = new ArrayList();
 
-    private int i = 0;
     
     void Start(){
         wallPapers.Add(tapete1);
@@ -25,12 +25,12 @@ public class DecorButton : MonoBehaviour
     
     public void changeWall(){
         if(statusScript.money >= 10){
-            if(i <wallpaperCount-1){
-                i++;
-            }else if(i == wallpaperCount-1){
-                i=0;
+            if(currentWallpaper <wallpaperCount-1){
+                currentWallpaper++;
+            }else if(currentWallpaper == wallpaperCount-1){
+                currentWallpaper=0;
             }
-            Tapete.sprite = (Sprite) wallPapers[i];
+            Tapete.sprite = (Sprite) wallPapers[currentWallpaper];
             statusScript.money = statusScript.money - 10;
             }
         

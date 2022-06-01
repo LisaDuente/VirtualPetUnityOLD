@@ -4,12 +4,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem{
 
-public static void SavePet(StatusScript status, ChoosingSprite sprite, PetMovement move){
+public static void SavePet(StatusScript status, ChoosingSprite sprite, PetMovement move, DecorButton decor){
     BinaryFormatter formatter = new BinaryFormatter();
     string path = Application.persistentDataPath + "/pet.save";
 
     FileStream stream = new FileStream(path, FileMode.Create);
-    PetData data = new PetData(status, sprite, move);
+    PetData data = new PetData(status, sprite, move, decor);
 
     formatter.Serialize(stream,data);
     stream.Close();

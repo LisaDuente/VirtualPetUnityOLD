@@ -7,10 +7,11 @@ public class GameSaveScript : MonoBehaviour
     public StatusScript status;
     public PetMovement move;
     public ChoosingSprite sprite;
+    public DecorButton decorButton;
 
 
    private void OnApplicationQuit() {
-       SaveSystem.SavePet(status, sprite, move);
+       SaveSystem.SavePet(status, sprite, move, decorButton);
    }
 
    private void Start() {
@@ -32,10 +33,16 @@ public class GameSaveScript : MonoBehaviour
         sprite.setHeadController();
         sprite.faceArrayPosition = data.face;
         sprite.setFaceController();
+        //says it doestn have an controller
+        sprite.sleepingAnimation = data.sleepingAnimationBed;
+        sprite.animator.SetBool("isSleeping",sprite.sleepingAnimation);
+
         Vector3 position;
         position.x = data.position[0];
         position.y= data.position[1];
         position.z = data.position[2];
         move.transform.position = position;
+        //why isnt this working?
+        decorButton.currentWallpaper =data.wallpaperBed;
    }
 }

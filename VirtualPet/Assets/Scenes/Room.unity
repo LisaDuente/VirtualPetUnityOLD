@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 67824542}
   - component: {fileID: 67824543}
   - component: {fileID: 67824545}
+  - component: {fileID: 67824547}
   - component: {fileID: 67824544}
   - component: {fileID: 67824546}
   m_Layer: 5
@@ -301,8 +302,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 67824543}
-        m_TargetAssemblyTypeName: BedScript, Assembly-CSharp
+      - m_Target: {fileID: 67824547}
+        m_TargetAssemblyTypeName: ChoosingSprite, Assembly-CSharp
         m_MethodName: sleepBed
         m_Mode: 1
         m_Arguments:
@@ -351,6 +352,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 433.4085, y: 205.71222}
   m_EdgeRadius: 0
+--- !u!114 &67824547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67824538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278f11325372075459411b4d195589e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideControllersBody: []
+  overriderBody: {fileID: 0}
+  overrideControllersFace: []
+  overriderFace: {fileID: 0}
+  overrideControllersHead: []
+  overriderHead: {fileID: 0}
+  bodyArrayPosition: 0
+  headArrayPosition: 0
+  faceArrayPosition: 0
+  animator: {fileID: 67824542}
+  pet: {fileID: 603807131}
+  sleepingAnimation: 0
 --- !u!1 &101245966
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4666667, g: 0.68235296, b: 0.72156864, a: 1}
+  m_Color: {r: 0.8000001, g: 0.6666667, b: 0.9333334, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1254,6 +1279,9 @@ MonoBehaviour:
   bodyArrayPosition: 0
   headArrayPosition: 0
   faceArrayPosition: 0
+  animator: {fileID: 0}
+  pet: {fileID: 0}
+  sleepingAnimation: 0
 --- !u!114 &603807140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,6 +1309,7 @@ MonoBehaviour:
   status: {fileID: 603807138}
   move: {fileID: 603807134}
   sprite: {fileID: 603807139}
+  decorButton: {fileID: 1540380762}
 --- !u!1 &604044949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,7 +1476,7 @@ RectTransform:
   m_LocalScale: {x: 0.08484177, y: 0.0848418, z: 0.084841795}
   m_Children: []
   m_Father: {fileID: 771188740}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1626,8 +1655,8 @@ RectTransform:
   - {fileID: 1048083475}
   - {fileID: 67824539}
   - {fileID: 487197084}
-  - {fileID: 1942227307}
   - {fileID: 675348436}
+  - {fileID: 1942227307}
   m_Father: {fileID: 2138787475}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2506,7 +2535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.882353, g: 0.7568628, b: 0.37254903, a: 1}
+  m_Color: {r: 0.5411765, g: 0.6313726, b: 0.96470594, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2875,7 +2904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3019608, g: 0.36862746, b: 0.10196079, a: 1}
+  m_Color: {r: 0.5411765, g: 0.7686275, b: 0.76470596, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3058,7 +3087,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1540380762}
         m_TargetAssemblyTypeName: DecorButton, Assembly-CSharp
         m_MethodName: changeWall
         m_Mode: 1
@@ -3123,8 +3152,9 @@ MonoBehaviour:
   Tapete: {fileID: 1077765891}
   statusScript: {fileID: 603807138}
   coins: {fileID: 1775729312}
-  tapete1: {fileID: 21300000, guid: 5c065b3f3c667e54a8c4aa4615161d62, type: 3}
-  tapete2: {fileID: 21300000, guid: 1ee8db384cbeabb4aaa703e91aaf25dd, type: 3}
+  tapete1: {fileID: 21300000, guid: 1ee8db384cbeabb4aaa703e91aaf25dd, type: 3}
+  tapete2: {fileID: 21300000, guid: 5c065b3f3c667e54a8c4aa4615161d62, type: 3}
+  currentWallpaper: 0
 --- !u!1 &1560750414
 GameObject:
   m_ObjectHideFlags: 0
@@ -4235,7 +4265,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 771188740}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

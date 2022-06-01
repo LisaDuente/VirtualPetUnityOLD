@@ -20,13 +20,19 @@ public class ChoosingSprite : MonoBehaviour
     public int headArrayPosition;
     public int faceArrayPosition;
 
+    public Animator animator;
+    public GameObject pet;
+    public bool sleepingAnimation;
+
  
     private void Awake() {
-        this.spriteRenderer = this.GetComponentsInChildren<SpriteRenderer>();
+        
     }
        // Start is called before the first frame update
     void Start()
     {
+        this.spriteRenderer = this.GetComponentsInChildren<SpriteRenderer>();
+        this.animator = this.GetComponent<Animator>();
         //chooseSprite();
     }
 
@@ -64,6 +70,20 @@ public class ChoosingSprite : MonoBehaviour
 
     public void setFaceController(){
        this.overriderFace.setAnimation(this.overrideControllersFace[faceArrayPosition]);
+    }
+
+
+    public void sleepBed(){
+        
+        if(animator.GetBool("isSleeping")){
+            sleepingAnimation = false;  
+            animator.SetBool("isSleeping",sleepingAnimation);  
+              
+        }else{
+            sleepingAnimation = true;
+            animator.SetBool("isSleeping",sleepingAnimation);
+            
+        }
     }
 
 
